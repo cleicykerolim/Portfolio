@@ -23,6 +23,7 @@ class ProjetoFactory extends Factory
     {
         return [
             //
+            'arquivo' => $this->faker->fileExtension(),
         ];
     }
 }

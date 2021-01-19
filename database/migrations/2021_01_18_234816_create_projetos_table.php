@@ -16,6 +16,7 @@ class CreateProjetosTable extends Migration
         Schema::create('projetos', function (Blueprint $table) {
             $table->id();
             $table->string('arquivo');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
