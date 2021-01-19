@@ -15,6 +15,10 @@ class CategoriaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        foreach(User::all() as $user) {
+        	Categoria::factory(2)->create([
+        		'user_id' => $user->id
+        	]);
+        }
     }
 }
