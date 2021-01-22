@@ -17,7 +17,7 @@ class CategoriaSeeder extends Seeder
     {
         foreach(User::all() as $user) {
         	Categoria::factory(2)->create([
-        		'user_id' => $user->id
+        		// 'user_id' => $user->id
         	]);
         }
     }
