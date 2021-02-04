@@ -9,7 +9,23 @@ class Projeto extends Model
 {
     use HasFactory;
 
-    public function user() {
-    	return $this->belongsTo(User::class);
+    protected $fillable = [
+        
+        'arquivo',
+        'categorias_id',
+        'user_id',
+
+    ];
+
+    public function categorias(){
+
+    	return $this->belongsTo(Categoria::class);
+
     }
+    public function users(){
+
+    	return $this->belongsTo(User::class);
+
+    }
+
 }
