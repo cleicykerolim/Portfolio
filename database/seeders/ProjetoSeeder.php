@@ -16,12 +16,14 @@ class ProjetoSeeder extends Seeder
      */
     public function run()
     {
-        //
-        $users = User::all();
-        foreach ($users as $user) {
-        	Projeto::factory(5)->create([
-        		'user_id' => $user->id
-        	]);
+       
+        foreach (User::all() as $user){
+            foreach (Categoria::where('user_id', $user->id)->get() as $categoria){
+                Projeto::factory(1)->create([
+                    'user_id' => $user->id,
+                    'categorias_id' => $categoria->id,
+                ]);
+            }
         }
     }
 }
