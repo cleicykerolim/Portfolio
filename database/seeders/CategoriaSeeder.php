@@ -16,10 +16,16 @@ class CategoriaSeeder extends Seeder
      */
     public function run()
     {
-        foreach(User::all() as $user) {
-        	Categoria::factory(2)->create([
-        		// 'user_id' => $user->id
-        	]);
+        foreach (User::all() as $user){
+            $categorias = collect(['Design','Programador','Fotográfo','Pintor', 'arquiteto'])->random(3);
+        
+        foreach ($categorias as $categoria){
+            Categoria::create([
+                'tipo' => $categoria,
+                'user_id' => $user->id,
+                ]);
+            } 
         }
+
     }
 }

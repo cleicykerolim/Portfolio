@@ -17,6 +17,7 @@ class CreateProjetosTable extends Migration
             $table->id();
             $table->string('arquivo');
             $table->integer('user_id');
+            $table->integer('categorias_id');
             $table->timestamps();
         });
     }
