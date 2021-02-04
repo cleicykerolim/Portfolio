@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Projeto;
 use App\Models\User;
+use App\Models\Categoria;
+use App\Models\Projeto;
 use Illuminate\Database\Seeder;
 
 class ProjetoSeeder extends Seeder
