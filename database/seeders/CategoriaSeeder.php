@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Categoria;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Collection;
 
 class CategoriaSeeder extends Seeder
 {
