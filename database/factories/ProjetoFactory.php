@@ -22,7 +22,6 @@ class ProjetoFactory extends Factory
     public function definition()
     {
         return [
-            //
             'arquivo' => $this->faker->fileExtension(),
         ];
     }
