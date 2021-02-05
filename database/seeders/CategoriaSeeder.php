@@ -17,7 +17,7 @@ class CategoriaSeeder extends Seeder
     public function run()
     {
         foreach (User::all() as $user){
-            $categorias = collect(['Design','Programador','Fotográfo','Pintor', 'arquiteto'])->random(3);
+            $categorias = collect(['Design','Programador','Fotográfo','Pintor', 'arquiteto'])->random(5);
         
         foreach ($categorias as $categoria){
             Categoria::create([
